@@ -8,7 +8,7 @@ redhorse_y = 0
 
 bluehorse_x = -7
 bluehorse_y = 110
-# add comment
+
 def startGame():
     global bluehorse_x
     global redhorse_x
