@@ -1,6 +1,7 @@
 from tkinter import *
 import time
 import random
+#testetst
 
 winner = False
 redhorse_x = 0
