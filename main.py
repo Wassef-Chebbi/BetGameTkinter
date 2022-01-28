@@ -59,8 +59,8 @@ canvas = Canvas(main_screen, width = 600 , height = 200, bg = 'white') #The Canv
 canvas.pack(pady=20)
 
 #import images
-redhorse =PhotoImage(file='/Users/wassef/PycharmProjects/HorseGame/venv/images/images/images.png')
-bluehorse =PhotoImage(file='/Users/wassef/PycharmProjects/HorseGame/venv/images/images/images (1).png')
+redhorse =PhotoImage(file='images/images.png')
+bluehorse =PhotoImage(file='images/images (1).png')
 
 #resizing images
 redhorse = redhorse.zoom(15)
