@@ -2,4 +2,4 @@
 
 ## Description
 
-This is a project by wassef
+This is a project , a betting game built with Tkinter Python ...
