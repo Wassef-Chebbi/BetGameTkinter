@@ -18,13 +18,16 @@ def startGame():
         time.sleep(0.05)
         random_move_blue_horse = random.randint(0,20)
         random_move_red_horse = random.randint(0,20)
+        
         #update the x position of horses
         bluehorse_x += random_move_blue_horse
         redhorse_x += random_move_red_horse
-
+        
         moveHorse(random_move_red_horse,random_move_blue_horse)
         main_screen.update()
+        
         winner = checkWinner()
+    
     if winner == "tie":
         Label(main_screen,text=winner,fg='green').place(x=200,y=450)
     else:
@@ -48,14 +51,17 @@ def checkWinner():
 
 
 
-
+#initi the screen
 main_screen = Tk()
 main_screen.title('Horse Race')
 main_screen.geometry('600x500')
 main_screen.config(background = 'white')
+
 #setting the canvas
-canvas = Canvas(main_screen, width = 600 , height = 200, bg = 'white') #The Canvas is a rectangular area intended for drawing pictures
-                                                                        # or other complex layouts. You can place graphics, text, widgets or frames on a Canvas.
+canvas = Canvas(main_screen, width = 600 , height = 200, bg = 'white') 
+#The Canvas is a rectangular area intended for drawing pictures
+# or other complex layouts. You can place graphics, text, widgets or frames on a Canvas.
+
 canvas.pack(pady=20)
 
 #import images
@@ -64,8 +70,8 @@ bluehorse =PhotoImage(file='images/images (1).png')
 
 #resizing images
 redhorse = redhorse.zoom(15)
-redhorse = redhorse.subsample(50)#Return a new PhotoImage based on the same image as this widget but use only every Xth or Yth pixel.
-
+redhorse = redhorse.subsample(50)
+#Return a new PhotoImage based on the same image as this widget but use only every Xth or Yth pixel.
 bluehorse = bluehorse.zoom(15)
 bluehorse = bluehorse.subsample(60)
 
@@ -80,6 +86,7 @@ l1.place(x=190,y=300)
 l2 = Label(main_screen,text='Click to Start',font=("Times", "24", "bold italic"),bg='white')
 l2.place(x=220,y=430)
 
+#adding the button
 b1 = Button(main_screen,height=2,width=15,text="PLAY",bg='gray',command=startGame  )
 b1.place(x=220,y=360)
 
